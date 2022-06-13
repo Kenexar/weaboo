@@ -5,7 +5,7 @@ function Login() {
 
     function submitHandler(event: { preventDefault: () => any; }) {
         event.preventDefault()
-        alert('The name that was enterd ' + name)
+        alert('The name that was entered ' + name)
     }
 
     return (
