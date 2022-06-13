@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Login from "./components/Login";
+import Dashboard from './components/Dashboard';
 import './style/style.scss'
 
 
 const root = ReactDOM.createRoot(
   document.getElementById('weeboo') as HTMLElement
 );
-root.render(<Login />);
+root.render(<Dashboard></Dashboard>);
