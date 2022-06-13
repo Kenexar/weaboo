@@ -11,7 +11,9 @@ module.exports = {
         'base': '#1A1C23',
         'secondary': '#242731',
         'button': '#313543',
-        'button-selected': '#454A5D'
+        'button-selected': '#454A5D',
+        'status-online': '#5CDD8B',
+        'status-offline': '#DC3545'
       },
     },
   },
