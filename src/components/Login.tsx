@@ -1,12 +1,25 @@
 import { useState } from "react";
+import {GoogleLogin, GoogleLogout} from "react-google-login";
+import config from "../config";
 
 function Login() {
     const [name, setName] = useState("");
     const [password, setPassword] = useState("");
+    const [key, setKey] = useState(`${config.GOOGLE_KEY}`)
+    // setKey(`${process.env.GOOGLE_KEY}`);
+
 
     function submitHandler(event: { preventDefault: () => any; }) {
         event.preventDefault()
         alert('The name that was entered ' + name)
+    }
+    const gRes = (res: any) => {
+        console.log(res)
+    }
+
+
+    function logout() {
+        console.log('LOGGED OUT')
     }
 
     return (
@@ -30,6 +43,19 @@ function Login() {
                         </div>
                         <div className='flex items-baseline justify-center'>
                             <button className='px-6 py-2 mt-4 text-amber-50 bg-button rounded-lg hover:bg-button-selected'>Login</button>
+                        </div>
+                        <div className='flex items-baseline justify-center border-t mt-4'>
+                            <GoogleLogin clientId={config.GOOGLE_KEY}
+                                         buttonText="Login"
+                                         onSuccess={gRes}
+                                         onFailure={gRes}
+                                         cookiePolicy={'single_host_origin'} />
+                            <GoogleLogout
+                                clientId={config.GOOGLE_KEY}
+                                buttonText="Logout"
+                                onLogoutSuccess={logout}
+                            >
+                            </GoogleLogout>
                         </div>
                     </div>
                 </form>

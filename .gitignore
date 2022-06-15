@@ -25,7 +25,7 @@ yarn-error.log*
 
 __pycache__
 
-config.*
+src/config.ts
 playground.*
 .env
 .idea/
