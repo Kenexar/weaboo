@@ -27,6 +27,9 @@ async def root():
 
 
 # so sql shit halt
-@app.get('/sql/get/{sql_string}')
+@app.get('/sql/get/{sql_string}/{params}')
 async def get(sql_string, params: str):
-    print(sql_string, params)
+    return sql_string, params
+
+
+@app.post('')
