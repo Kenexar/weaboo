@@ -16,22 +16,23 @@ function DashboardButton(props: ButtonProps) {
         document.getElementById(props.id2)?.style.setProperty('border-bottom-right-radius', isPressed ?  "0rem" : "0.5rem");
     }
 
-    const style = "hover:bg-button-selected hover:duration-300 duration-100 p-3 bg-button -mt-2"
+    const style = "hover:bg-white/10 hover:duration-300 duration-100 p-3 bg-button cursor-pointer"
 
     return (
         <div className='select-none '>
-            <button onClick={shoot} id={props.id2} className="drop-shadow-lg rounded-r-lg w-full h-10 bg-button text-white hover:bg-button-selected hover:duration-200 duration-100 mt-2" >
+            <button onClick={shoot} id={props.id2} className="drop-shadow-lg rounded-r-lg w-full h-10 bg-button text-white mt-2 border border-button hover:border-slate-400" >
                 <p className="text-left -mt-3 ml-2 absolute">{props.text}</p>
-
             </button>
-            <ul id={props.id1} className='bg-20 mt-1.3 hidden flex-col'>
-                <li className="list-item w-full ">
-                    <div className={style}>
+            <ul id={props.id1} className='bg-20 -mt-2 hidden flex-col '>
+                <li className="list-item w-full">
+                    <div className={style}  onClick={function() {
+                    console.log("TEst")
+                }}>
                         <p className="bg-status-online w-16 rounded-lg text-sm px-2 font-medium leading-6 whitespace-nowrap text-center">Online</p>
                         <p className='ml-2 text-white'>Minecraft Server-1</p>
                     </div>
                 </li>
-                <li className="list-item w-full ">
+                <li className="list-item w-full">
                     <div className={style}>
                         <p className="bg-status-online w-16 rounded-lg text-sm px-2 font-medium leading-6 whitespace-nowrap text-center">Online</p>
                         <p className='ml-2 text-white'>Minecraft Server-2</p>
