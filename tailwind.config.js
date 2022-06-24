@@ -1,9 +1,9 @@
-/** @type {import('tailwindcss').Config} */
+import('tailwindcss').Config
 const colors = require('tailwindcss/colors')
 
 module.exports = {
   content: [
-      "./src/**/*.{js,jsx,ts,tsx,scss}"
+    "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
     extend: {
@@ -12,8 +12,10 @@ module.exports = {
         'secondary': '#242731',
         'button': '#313543',
         'button-selected': '#454A5D',
+        'status-online': '#5CDD8B',
+        'status-offline': '#DC3545',
         'accent': '#2993bf'
-      }
+      },
     },
   },
   plugins: [],
