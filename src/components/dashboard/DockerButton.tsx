@@ -1,19 +1,21 @@
 import React from 'react';
 
+const $ = require('jquery');
+
 interface ButtonProps {
     text: string;
     id1: string;
     id2: string;
 }
 
-function DashboardButton(props: ButtonProps) {
+function DockerButton(props: ButtonProps) {
     let isPressed = false;
 
     function shoot() {
         isPressed = !isPressed;
         console.log(isPressed)
-        document.getElementById(props.id1)?.style.setProperty('display', isPressed ? "flex" : "none");
-        document.getElementById(props.id2)?.style.setProperty('border-bottom-right-radius', isPressed ? "0rem" : "0.5rem");
+        $(props.id1)?.style.setProperty('display', isPressed ? "flex" : "none");
+        $(props.id2)?.style.setProperty('border-bottom-right-radius', isPressed ? "0rem" : "0.5rem");
     }
 
     const style = "hover:bg-white/10 hover:duration-300 duration-100 p-3 bg-button cursor-pointer"
@@ -50,4 +52,4 @@ function DashboardButton(props: ButtonProps) {
     )
 }
 
-export default DashboardButton
+export default DockerButton;

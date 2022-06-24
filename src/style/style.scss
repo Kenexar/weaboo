@@ -12,20 +12,32 @@ $accent: #2993bf;
 }
 
 ::-webkit-scrollbar {
+  position: absolute;
   width: 5px;
 }
 
 ::-webkit-scrollbar-track {
+  position: absolute;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
+  position: absolute;
   background: gray;
   border-radius: 10px;
 }
 
 
-img {
-  width: 40%;
-  max-width: 40%;
+.brand-logo {
+  margin-top: 1rem;
+  width: 3rem;
+}
+
+.brand-name p {
+  color: white;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 2rem;
+  margin-left: .8rem;
+  margin-top: 1.2rem;
 }

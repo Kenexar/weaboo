@@ -37,13 +37,13 @@ async def root():
 
 # so sql shit halt
 @app.get('/sql/get/{sql_string}/{params}')
-@limiter.limit("5/minute")
+# @limiter.limit("5/minute")
 async def get(sql_string, params: str):
     return sql_string, params
 
 
 @app.get('/proof/login/{username}')
-@limiter.limit("5/minute")
+# @limiter.limit("5/minute")
 async def get_login(username):
     user_psw = conn.get('SELECT `password` FROM user.user WHERE `username` = %s', (username,))
 

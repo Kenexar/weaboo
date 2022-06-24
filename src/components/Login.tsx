@@ -39,7 +39,7 @@ function Login() {
         <div className='flex items-center justify-center min-h-screen bg-base'>
         <div className='px-8 py-6 mt-4 text-left bg-secondary shadow-lg rounded'>
             <div className='inline flex justify-center'>
-                <img src="/WHITEsvg.svg" alt="Brand logo" />
+                <img src="/brandLogo.svg" alt="Brand logo" />
             </div>
 
             <form onSubmit={submitHandler}>

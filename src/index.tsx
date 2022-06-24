@@ -11,4 +11,4 @@ console.log(cookies.get('logged'))
 const root = ReactDOM.createRoot(
   document.getElementById('weeboo') as HTMLElement
 );
-root.render(<Dashboard></Dashboard>);
+root.render(<Dashboard />);

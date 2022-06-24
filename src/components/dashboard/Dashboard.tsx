@@ -2,12 +2,21 @@ import DashboardButton from "./DashboardButton";
 
 function Dashboard() {
     return (
-        <div>
-            <header className="bg-red">
-                <h1>Kenexar</h1>
-            </header>
+        <div className="flex bg-base w-screen h-screen flex-col">
+            <div>
+                <nav className="h-[6rem] main-nav flex bg-secondary relative" role="navigation">
+                    <div className="brand flex p-0">
+                        <div className="brand-logo ml-8">
+                            <img src="/brandLogo.svg" alt="Brand Logo"/>
+                        </div>
+                        <div className="brand-name">
+                            <p>KENEXAR.EU</p>
+                        </div>
+                    </div>
+                </nav>
+            </div>
             <div className="flex">
-                <aside className=" md:max-w-xs max-w-[12rem] h-screen bg-secondary columns-xs ">
+                <aside className="md:max-w-xs max-w-[12rem] h-screen bg-secondary columns-xs ">
                     <div className="flex flex-col box-border h-full">
                         <ul className="min-h-0 flex-1 overflow-auto">
                             <li className="">
@@ -18,7 +27,7 @@ function Dashboard() {
                         </ul>
                     </div>
                 </aside>
-                
+
                 <div className="bg-base flex-auto">
                     <h1 className="text-white font-bold text-3xl m-6 overflow-y-hidde text-center">Willkommen!</h1>
                 </div>
