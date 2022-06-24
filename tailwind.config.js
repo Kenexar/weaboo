@@ -13,7 +13,8 @@ module.exports = {
         'button': '#30363e',
         'button-selected': '#30363e',
         'status-online': '#5CDD8B',
-        'status-offline': '#DC3545'
+        'status-offline': '#DC3545',
+        'accent': '#2993bf'
       },
     },
   },

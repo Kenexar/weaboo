@@ -23,7 +23,10 @@ yarn-debug.log*
 yarn-error.log*
 
 
-config.*
+__pycache__
+
+src/config.ts
 playground.*
 .env
 .idea/
+venv/
